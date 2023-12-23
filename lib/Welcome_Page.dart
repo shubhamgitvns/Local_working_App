@@ -1,5 +1,6 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:swipebuttonflutter/swipebuttonflutter.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -131,6 +132,7 @@ class HomePage extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyText1),
             ],
           ),
+
         ),
         back: Container(
           decoration: BoxDecoration(
@@ -219,7 +221,29 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
+
       ),
+    );
+  }
+  _renderSwipinButton(context){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SwipingButton(
+          iconColor: Colors.white,
+          padding: const EdgeInsets.only(left: 20),
+          swipeButtonColor: Colors.lightBlue.shade400,
+          backgroundColor: Colors.grey.shade300,
+          text: 'Swipe right to start',
+          onSwipeCallback: () async {
+            //Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen(),));
+          },
+          buttonTextStyle: const TextStyle(
+              color: Colors.white,
+              fontFamily: 'Roboto',
+              fontWeight: FontWeight.w400),
+        ),
+      ],
     );
   }
 
@@ -233,14 +257,13 @@ class HomePage extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              _renderAppBar(context),
               Expanded(
                 flex: 4,
                 child: _renderContent(context),
               ),
               Expanded(
                 flex: 1,
-                child: Container(),
+                child: _renderSwipinButton(context),
               ),
             ],
           )
