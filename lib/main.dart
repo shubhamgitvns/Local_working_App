@@ -48,34 +48,88 @@ class HomePage extends StatelessWidget {
           print(status);
         },
         front: Container(
-          decoration: BoxDecoration(
-            color: Color(0xFF006666),
+          decoration: const BoxDecoration(
+            color:Color(0xFF006666),
+
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Front', style: Theme.of(context).textTheme.headline1),
+              Text('PLUMBER', style: Theme.of(context).textTheme.headline1),
               Stack(
                 alignment: Alignment.center,
                 children: [
-                  Container(
-                    height: 100,
-                    width: 200,
-                    color: Colors.white,
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Container(
+                      height: 200,
+
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black,
+                              offset: Offset(2.0, 2.0),
+                              blurRadius: 10,
+                              spreadRadius: 1.0,
+                            ),
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(-2.0, -2.0),
+                              blurRadius: 10,
+                              spreadRadius: 1.0,
+                            ),
+                          ]
+                      ),
+                      child: Center(
+                        child: SizedBox(
+                          width: 300,
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Text(
+                              "What does Client mean? The person(s) on whose behalf the firm is providing a service. In terms of conduct, duties are owed to clients of the firm and this may sometimes include former and prospective clients. A client is not necessarily the same person as the individual paying for the legal services.",
+                              style: TextStyle(
+                                  color: Colors.black,
+
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 100),
+                    padding: const EdgeInsets.only(bottom: 200),
                     child: Container(
-                      height: 50,
-                      width: 50,
-                      color: Colors.yellow,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.all(Radius.circular(50),),
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.transparent,
+                              offset: Offset(2.0, 2.0),
+                              blurRadius: 10,
+                              spreadRadius: 1.0,
+                            ),
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(-2.0, -2.0),
+                              blurRadius: 10,
+                              spreadRadius: 1.0,
+                            ),
+                          ]
+                      ),
+                      child: CircleAvatar(
+                        radius: 40,
+                        backgroundColor: Colors.teal,
+                        backgroundImage: NetworkImage("https://png.pngtree.com/png-clipart/20230423/original/pngtree-plumber-flat-icon-png-image_9077310.png"),
+                      ),
                     ),
                   )
                 ],
-
               ),
-
               Text('Click here to flip back',
                   style: Theme.of(context).textTheme.bodyText1),
             ],
@@ -89,7 +143,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Back', style: Theme.of(context).textTheme.headline1),
+              Card(child: Text('Back', style: Theme.of(context).textTheme.headline1)),
               Text('Click here to flip front',
                   style: Theme.of(context).textTheme.bodyText1),
             ],
