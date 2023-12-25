@@ -24,7 +24,7 @@ class _Option_PageState extends State<Option_Page> {
               const SizedBox(
                 height: 100,
               ),
-              Text("Select ypur status and create the profile",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: App_Theam.White),
+              Text("Select your status and create the profile",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: App_Theam.White,),
               textAlign: TextAlign.center),
               SizedBox(
                 height: 100,
@@ -43,13 +43,13 @@ class _Option_PageState extends State<Option_Page> {
                           BoxShadow(
                             color: Colors.grey,
                             offset: Offset(2.0, 2.0),
-                            blurRadius: 2,
+                            blurRadius: 10,
                             spreadRadius: 1.0,
                           ),
                           BoxShadow(
-                            color: Colors.transparent,
+                            color: Colors.black,
                             offset: Offset(-2.0, -2.0),
-                            blurRadius: 2,
+                            blurRadius: 10,
                             spreadRadius: 1.0,
                           ),
                         ]
@@ -92,13 +92,13 @@ class _Option_PageState extends State<Option_Page> {
                             BoxShadow(
                               color: Colors.grey,
                               offset: Offset(2.0, 2.0),
-                              blurRadius: 2,
+                              blurRadius: 10,
                               spreadRadius: 1.0,
                             ),
                             BoxShadow(
-                              color: Colors.transparent,
+                              color: Colors.black,
                               offset: Offset(-2.0, -2.0),
-                              blurRadius: 2,
+                              blurRadius: 10,
                               spreadRadius: 1.0,
                             ),
                           ]
@@ -111,7 +111,7 @@ class _Option_PageState extends State<Option_Page> {
                           Row(
                             // mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7680_29xJG9TwNbrZSfspwmcpgloMBwoummzN67jJt7OTecsAOERnJ3689VRVAuomvT8&usqp=CAU",height: 150,width: 145,)
+                              Image.network("https://img.freepik.com/free-vector/group-construction-workers-cartoon-characters_1308-90754.jpg",height: 150,width: 130,)
                             ],
                           ),
                           Row(
