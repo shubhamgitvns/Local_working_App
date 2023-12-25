@@ -2,6 +2,8 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:swipebuttonflutter/swipebuttonflutter.dart';
 
+import 'Option_Page.dart';
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -15,7 +17,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   _renderBg() {
     return Container(
       decoration: BoxDecoration(color: const Color(0xFFFFFFFF)),
@@ -231,12 +238,12 @@ class HomePage extends StatelessWidget {
       children: [
         SwipingButton(
           iconColor: Colors.white,
-          padding: const EdgeInsets.only(left: 20),
+          padding:  EdgeInsets.only(left: 20),
           swipeButtonColor: Colors.lightBlue.shade400,
           backgroundColor: Colors.grey.shade300,
           text: 'Swipe right to start',
           onSwipeCallback: () async {
-            //Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen(),));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const Option_Page()));
           },
           buttonTextStyle: const TextStyle(
               color: Colors.white,
