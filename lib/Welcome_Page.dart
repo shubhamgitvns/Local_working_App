@@ -22,17 +22,6 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  _renderAppBar(context) {
-    return MediaQuery.removePadding(
-      context: context,
-      removeBottom: true,
-      child: AppBar(
-        elevation: 0.0,
-        backgroundColor: Color(0x00FFFFFF),
-      ),
-    );
-  }
-
   _renderContent(context) {
     return Card(
       elevation: 0.0,
@@ -47,22 +36,27 @@ class HomePage extends StatelessWidget {
         },
         front: Container(
           decoration: const BoxDecoration(
-            color:Color(0xFF006666),
-
+            color: Color(0xFF006666),
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('CUSTOMER', style: Theme.of(context).textTheme.headline1),
+              const Text('CUSTOMER',
+                  style: TextStyle(
+                      fontSize: 40,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold)),
               Stack(
                 alignment: Alignment.center,
                 children: [
+                  SizedBox(
+                    height: 400,
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Container(
-                      height: 200,
-
+                      height: 250,
                       decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -79,18 +73,16 @@ class HomePage extends StatelessWidget {
                               blurRadius: 10,
                               spreadRadius: 1.0,
                             ),
-                          ]
-                      ),
-                      child: Center(
+                          ]),
+                      child: const Center(
                         child: SizedBox(
                           width: 300,
                           child: Padding(
-                            padding: const EdgeInsets.only(top: 20),
+                            padding: EdgeInsets.all(20.0),
                             child: Text(
                               "What does Client mean? The person(s) on whose behalf the firm is providing a service. In terms of conduct, duties are owed to clients of the firm and this may sometimes include former and prospective clients. A client is not necessarily the same person as the individual paying for the legal services.",
                               style: TextStyle(
                                   color: Colors.black,
-
                                   fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -99,11 +91,13 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 200),
+                    padding: const EdgeInsets.only(bottom: 300),
                     child: Container(
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.lightBlue),
-                          borderRadius: BorderRadius.all(Radius.circular(50),),
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(50),
+                          ),
                           boxShadow: const [
                             BoxShadow(
                               color: Colors.transparent,
@@ -117,12 +111,11 @@ class HomePage extends StatelessWidget {
                               blurRadius: 10,
                               spreadRadius: 1.0,
                             ),
-                          ]
-                      ),
-                      child: CircleAvatar(
-                        radius: 40,
+                          ]),
+                      child: const CircleAvatar(
+                        radius: 50,
                         backgroundColor: Colors.teal,
-                        backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-czA8HMc57FFRLnsmYEs0rTUiT4E68sAMlzYDOtg1hbfL08eO7qz0DSvxYo_nUB-iJwI&usqp=CAU"),
+                         backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-czA8HMc57FFRLnsmYEs0rTUiT4E68sAMlzYDOtg1hbfL08eO7qz0DSvxYo_nUB-iJwI&usqp=CAU"),
                       ),
                     ),
                   )
@@ -132,100 +125,107 @@ class HomePage extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyText1),
             ],
           ),
-
         ),
+        // *************** Back code***************************
         back: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xFF006666),
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
           ),
-          child:  Column(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('PLUMBER', style: Theme.of(context).textTheme.headline1),
+              const Text('PLUMBER', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 50)),
+
               Stack(
                 alignment: Alignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Container(
-                      height: 200,
-
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black,
-                              offset: Offset(2.0, 2.0),
-                              blurRadius: 10,
-                              spreadRadius: 1.0,
-                            ),
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(-2.0, -2.0),
-                              blurRadius: 10,
-                              spreadRadius: 1.0,
-                            ),
-                          ]
-                      ),
-                      child: Center(
-                        child: SizedBox(
-                          width: 300,
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 20),
-                            child: Text(
-                              "What does Client mean? The person(s) on whose behalf the firm is providing a service. In terms of conduct, duties are owed to clients of the firm and this may sometimes include former and prospective clients. A client is not necessarily the same person as the individual paying for the legal services.",
-                              style: TextStyle(
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Container(
+                          height: 250,
+                          decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                              boxShadow: [
+                                BoxShadow(
                                   color: Colors.black,
-
-                                  fontWeight: FontWeight.bold),
+                                  offset: Offset(2.0, 2.0),
+                                  blurRadius: 10,
+                                  spreadRadius: 1.0,
+                                ),
+                                BoxShadow(
+                                  color: Colors.grey,
+                                  offset: Offset(-2.0, -2.0),
+                                  blurRadius: 10,
+                                  spreadRadius: 1.0,
+                                ),
+                              ]),
+                          child: const Center(
+                            child: SizedBox(
+                              width: 300,
+                              child: Padding(
+                                padding: EdgeInsets.all(20.0),
+                                child: Text(
+                                  "What does Client mean? The person(s) on whose behalf the firm is providing a service. In terms of conduct, duties are owed to clients of the firm and this may sometimes include former and prospective clients. A client is not necessarily the same person as the individual paying for the legal services.",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
                             ),
                           ),
                         ),
+
                       ),
-                    ),
+                    ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 200),
+                    padding: const EdgeInsets.only(bottom: 300),
                     child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey),
-                          borderRadius: BorderRadius.all(Radius.circular(50),),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.transparent,
-                              offset: Offset(2.0, 2.0),
-                              blurRadius: 10,
-                              spreadRadius: 1.0,
+                      color: const Color(0xFF006666),
+
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 10,right: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            CircleAvatar(
+                              radius: 40,
+                              backgroundColor: Colors.lightBlue,
+                               backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqtymxY5jg1_6tOOMGlfGMH6ZHnR9p9BhYfQ&usqp=CAU"),
                             ),
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(-2.0, -2.0),
-                              blurRadius: 10,
-                              spreadRadius: 1.0,
+                            CircleAvatar(
+                              radius: 40,
+                              backgroundColor: Colors.teal,
+                              backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqtymxY5jg1_6tOOMGlfGMH6ZHnR9p9BhYfQ&usqp=CAU"),
                             ),
-                          ]
-                      ),
-                      child: CircleAvatar(
-                        radius: 40,
-                        backgroundColor: Colors.teal,
-                        backgroundImage: NetworkImage("https://png.pngtree.com/png-clipart/20230423/original/pngtree-plumber-flat-icon-png-image_9077310.png"),
+                            CircleAvatar(
+                              radius: 40,
+                              backgroundColor: Colors.teal,
+                              backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqtymxY5jg1_6tOOMGlfGMH6ZHnR9p9BhYfQ&usqp=CAU"),
+                            ),
+
+                          ],
+                        ),
                       ),
                     ),
                   )
                 ],
               ),
+
               Text('Click here to flip back',
                   style: Theme.of(context).textTheme.bodyText1),
             ],
           ),
         ),
-
       ),
     );
   }
-  _renderSwipinButton(context){
+
+  _renderSwipinButton(context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -254,18 +254,20 @@ class HomePage extends StatelessWidget {
         fit: StackFit.expand,
         children: <Widget>[
           _renderBg(),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Expanded(
-                flex: 4,
-                child: _renderContent(context),
-              ),
-              Expanded(
-                flex: 1,
-                child: _renderSwipinButton(context),
-              ),
-            ],
+          SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Expanded(
+                  flex: 4,
+                  child: _renderContent(context),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: _renderSwipinButton(context),
+                ),
+              ],
+            ),
           )
         ],
       ),
