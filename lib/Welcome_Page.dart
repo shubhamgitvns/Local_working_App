@@ -1,5 +1,6 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:githubtesting/App_Theam.dart';
 import 'package:swipebuttonflutter/swipebuttonflutter.dart';
 
 import 'Option_Page.dart';
@@ -42,32 +43,32 @@ class _HomePageState extends State<HomePage> {
           print(status);
         },
         front: Container(
-          decoration: const BoxDecoration(
-            color: Color(0xFF006666),
+          decoration:  BoxDecoration(
+            color: App_Theam.bgcolor,
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Text('CUSTOMER',
+               Text('CUSTOMER',
                   style: TextStyle(
                       fontSize: 40,
-                      color: Colors.white,
+                      color: App_Theam.White,
                       fontWeight: FontWeight.bold)),
               Stack(
                 alignment: Alignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 400,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Container(
                       height: 250,
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                          boxShadow: [
+                      decoration:  BoxDecoration(
+                          color: App_Theam.White,
+                          borderRadius: const BorderRadius.all(Radius.circular(20)),
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black,
                               offset: Offset(2.0, 2.0),
@@ -101,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(bottom: 300),
                     child: Container(
                       decoration: BoxDecoration(
-                          border: Border.all(color: Colors.lightBlue),
+                          border: Border.all(color: App_Theam.border_color),
                           borderRadius: const BorderRadius.all(
                             Radius.circular(50),
                           ),
@@ -121,7 +122,6 @@ class _HomePageState extends State<HomePage> {
                           ]),
                       child: const CircleAvatar(
                         radius: 50,
-                        backgroundColor: Colors.teal,
                          backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-czA8HMc57FFRLnsmYEs0rTUiT4E68sAMlzYDOtg1hbfL08eO7qz0DSvxYo_nUB-iJwI&usqp=CAU"),
                       ),
                     ),
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              const Text('PLUMBER', style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 50)),
+               Text('PLUMBER', style: TextStyle(color:App_Theam.White,fontWeight: FontWeight.bold,fontSize: 50)),
 
               Stack(
                 alignment: Alignment.center,
@@ -153,10 +153,10 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.all(20.0),
                         child: Container(
                           height: 250,
-                          decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                              boxShadow: [
+                          decoration:  BoxDecoration(
+                              color: App_Theam.White,
+                              borderRadius: const BorderRadius.all(Radius.circular(20)),
+                              boxShadow: const [
                                 BoxShadow(
                                   color: Colors.black,
                                   offset: Offset(2.0, 2.0),
@@ -239,7 +239,7 @@ class _HomePageState extends State<HomePage> {
         SwipingButton(
           iconColor: Colors.white,
           padding:  EdgeInsets.only(left: 20),
-          swipeButtonColor: Colors.lightBlue.shade400,
+          swipeButtonColor: App_Theam.button_color,
           backgroundColor: Colors.grey.shade300,
           text: 'Swipe right to start',
           onSwipeCallback: () async {
