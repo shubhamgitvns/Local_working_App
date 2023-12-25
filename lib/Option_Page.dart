@@ -11,6 +11,9 @@ class _Option_PageState extends State<Option_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.teal.shade600,
+      ),
       body: SafeArea(
         child: Container(
             color: Colors.teal.shade600,
