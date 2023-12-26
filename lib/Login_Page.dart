@@ -13,43 +13,163 @@ class _Login_PageState extends State<Login_Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Text("Login"),
-        centerTitle: true,
+        backgroundColor: App_Theam.Teal,
       ),
-      body: Container(
-        color: App_Theam.White,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  child: Text("img"),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 300,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        labelText: "Email",
+      body: SafeArea(
+        child: Container(
+          color: App_Theam.White,
+          child: Column(
+            children: [
+              Container(
+                child: Stack(
+                  children: [
+                    Container(
+                      child: Container(
+                        height: 350,
+                        decoration: BoxDecoration(
+                            color: App_Theam.Teal,
+                            borderRadius: const BorderRadius.only(
+                                bottomRight: Radius.circular(75),
+                                bottomLeft: Radius.circular(75))),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: Container(
+                                  height: 130,
+                                  child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOts1yXAKjGzNMxvmq6Tz2NgHxf7gz4ZLaDXcDJIyuK6d_6ux07MGAreMQ7cT0V7NC1lQ&usqp=CAU")),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                alignment: Alignment.centerLeft,
+                                child: const
+                                Text(
+                                  "Welcome",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 30,
+                                      color: Colors.white),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      keyboardType: TextInputType.emailAddress,
-                    ))
-              ],
-            )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 200),
+                      child: Center(
+                        child: Container(
+                          height: 230,
+                          width: 300,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              //border: Border.all(color: Colors.orange),
+                              borderRadius: BorderRadius.circular(15),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Colors.transparent,
+                                  offset: Offset(2.0, 2.0),
+                                  blurRadius: 10,
+                                  spreadRadius: 1.0,
+                                ),
+                                BoxShadow(
+                                  color: Colors.orange,
+                                  offset: Offset(-2.0, -2.0),
+                                  blurRadius: 10,
+                                  spreadRadius: 1.0,
+                                ),
+                              ]),
+                          child: Padding(
+                            padding: EdgeInsets.all(10.0),
+                            child: Column(
+                              children: [
+                                 Row(mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "Get Started *",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                      color: App_Theam.Teal),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                 Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: App_Theam.Teal),
+                                        borderRadius: BorderRadius.circular(20)
+                                      ),
+                                      child: const SizedBox(
+                                          width: 200,
+                                          child: TextField(
+                                            decoration: InputDecoration(
+                                              labelText: "Email",
 
-          ],
+                                            ),
+                                            keyboardType: TextInputType.emailAddress,
+                                          ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+
+              Expanded(
+                child: Center(
+                  child: Container(
+                    width: 150,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: App_Theam.button_color,
+                        borderRadius: BorderRadius.circular(20),
+                      boxShadow:  [
+                        const BoxShadow(
+                          color: Colors.transparent,
+                          offset: Offset(2.0, 2.0),
+                          blurRadius: 10,
+                          spreadRadius: 1.0,
+                        ),
+                        BoxShadow(
+                          color:App_Theam.border_color,
+                          offset: Offset(-2.0, -2.0),
+                          blurRadius: 10,
+                          spreadRadius: 1.0,
+                        ),
+                      ]
+                    ),
+                    child:  Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Login",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: App_Theam.White),)
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
-
     );
   }
 }
