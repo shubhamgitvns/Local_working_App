@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Login_Page.dart';
 import 'Option_Page.dart';
 import 'Welcome_Page.dart';
 
@@ -9,9 +10,7 @@ void main() {
     initialRoute: '/',
     routes: {
       '/': (context) =>  MyApp(),
-       //'/Option_Page': (context) => Option_Page(),
-      // '/SliderPage': (context) =>  EnlargeStrategyDemo (),
-      // '/MenuePage': (context) => MenuePage(),
+
     },
   ));
 }
