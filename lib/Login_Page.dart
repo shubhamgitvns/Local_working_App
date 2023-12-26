@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:githubtesting/App_Theam.dart';
 
 class Login_Page extends StatefulWidget {
   const Login_Page({super.key});
@@ -15,10 +16,38 @@ class _Login_PageState extends State<Login_Page> {
         title:Text("Login"),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
+      body: Container(
+        color: App_Theam.White,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  child: Text("img"),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 300,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: "Email",
+                      ),
+                      keyboardType: TextInputType.emailAddress,
+                    ))
+              ],
+            )
 
-        ],
+          ],
+        ),
       ),
 
     );
