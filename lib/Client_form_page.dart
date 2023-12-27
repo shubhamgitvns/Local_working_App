@@ -19,10 +19,21 @@ class _Client_form_PageState extends State<Client_form_Page> {
         color: App_Theam.White,
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+            Stack(
+              alignment: Alignment.center,
               children: [
-                Text("Detail page")
+                Container(
+                  height: 200,
+                  color: App_Theam.Teal,
+                ),
+                Container(
+                  // height: 50,
+                  // width: 50,
+                  //color: App_Theam.White,
+                  child: CircleAvatar(
+                    radius: 50,
+                  ),
+                )
               ],
             )
           ],
