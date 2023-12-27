@@ -58,29 +58,29 @@ class _Client_form_PageState extends State<Client_form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
                             color: App_Theam.Teal,
-                            width: 2,
+                            width: 1.5,
                           ),
                         ),
 
                         //********Focus border like hover******************8
                         focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30),
+                            borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(
                               color: App_Theam.border_color,
-                              width: 1,
                             )),
                         prefix: Icon(
                           Icons.person,
                           color: App_Theam.Teal,
+
                         ),
                         labelText: "Name",
-                        //labelStyle: TextStyle(color: App_Theam.border_color),
+                        labelStyle: TextStyle(color: App_Theam.Teal),
                       ),
                     ),
                   ),
@@ -88,7 +88,7 @@ class _Client_form_PageState extends State<Client_form_Page> {
               ),
 
               SizedBox(
-                height: 10,
+                height: 20,
               ),
 
               Row(
@@ -98,28 +98,29 @@ class _Client_form_PageState extends State<Client_form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
                             color: App_Theam.Teal,
-                            width: 2,
+                            width: 1.5,
                           ),
                         ),
 
                         //********Focus border like hover******************8
                         focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30),
+                            borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(
                               color: App_Theam.border_color,
-                              width: 1,
+
                             )),
                         prefix: Icon(
                           Icons.phone,
                           color: App_Theam.Teal,
                         ),
                         labelText: "number",
+                        labelStyle: TextStyle(color: App_Theam.Teal)
                       ),
                       keyboardType: TextInputType.phone,
                     ),
@@ -127,7 +128,7 @@ class _Client_form_PageState extends State<Client_form_Page> {
                 ],
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
 
               Row(
@@ -137,29 +138,29 @@ class _Client_form_PageState extends State<Client_form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
                             color: App_Theam.Teal,
-                            width: 2,
+                            width: 1.5,
                           ),
                         ),
 
                         //********Focus border like hover******************8
                         focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30),
+                            borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(
                               color: App_Theam.border_color,
-                              width: 1,
+
                             )),
                         prefix: Icon(
                           Icons.home,
                           color: App_Theam.Teal,
                         ),
                         labelText: "Address",
-                        //labelStyle: TextStyle(color: App_Theam.border_color),
+                        labelStyle: TextStyle(color: App_Theam.Teal),
                       ),
                     ),
                   ),
@@ -167,7 +168,7 @@ class _Client_form_PageState extends State<Client_form_Page> {
               ),
 
               SizedBox(
-                height: 10,
+                height: 20,
               ),
 
               Row(
@@ -177,34 +178,36 @@ class _Client_form_PageState extends State<Client_form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
                             color: App_Theam.Teal,
-                            width: 2,
+                            width: 1.5,
                           ),
                         ),
 
                         //********Focus border like hover******************8
                         focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30),
+                            borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(
                               color: App_Theam.border_color,
-                              width: 1,
+
                             )),
                         prefix: Icon(
                           Icons.location_city,
                           color: App_Theam.Teal,
                         ),
                         labelText: "Location",
+                        labelStyle: TextStyle(color: App_Theam.Teal),
+
                       ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -212,13 +215,13 @@ class _Client_form_PageState extends State<Client_form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(15),
                           borderSide: BorderSide(
                             color: App_Theam.Teal,
-                            width: 2,
+                            width: 1.5,
                           ),
 
 
@@ -226,14 +229,16 @@ class _Client_form_PageState extends State<Client_form_Page> {
 
                         //********Focus border like hover******************8
                         focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30),
+                            borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(
                               color: App_Theam.border_color,
-                              width: 1,
+
                             )
                         ),
                         prefix: Icon(Icons.pin,color: App_Theam.Teal,),
                         labelText: "Pin",
+                        labelStyle: TextStyle(color: App_Theam.Teal),
+
                       ),
                       keyboardType: TextInputType.phone,
 

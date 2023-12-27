@@ -113,7 +113,7 @@ class _Login_PageState extends State<Login_Page> {
                                           autofocus: true,
                                           decoration: InputDecoration(
                                             enabledBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(color: Colors.orange)
+                                                borderSide: BorderSide(color: App_Theam.border_color)
                                             ),
                                             labelText: "*Email",
                                             labelStyle:TextStyle(color: App_Theam.Teal),
@@ -134,6 +134,9 @@ class _Login_PageState extends State<Login_Page> {
                                       child: TextField(
                                         autofocus: true,
                                         decoration: InputDecoration(
+                                            enabledBorder: UnderlineInputBorder(
+                                                borderSide: BorderSide(color: App_Theam.border_color)
+                                            ),
                                           labelText: "*Phone",
                                           labelStyle: TextStyle(color: App_Theam.Teal)
 
@@ -158,7 +161,7 @@ class _Login_PageState extends State<Login_Page> {
                 child: Center(
                   child: InkWell(
                     child: Container(
-                      width: 150,
+                      width: 300,
                       height: 50,
                       decoration: BoxDecoration(
                         color: App_Theam.button_color,
