@@ -35,6 +35,32 @@ class _Client_form_PageState extends State<Client_form_Page> {
                   ),
                 )
               ],
+            ),
+            //*************Text form code start******************
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 300,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      //********Focus border like hover******************8
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        borderSide: BorderSide(
+                          color: App_Theam.Teal,
+                          width: 2,
+                        )
+                      )
+
+                    ),
+
+                  ),
+                )
+              ],
             )
           ],
         ),
