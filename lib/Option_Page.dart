@@ -32,52 +32,58 @@ class _Option_PageState extends State<Option_Page> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    height: 200,
-                    width: 150,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: App_Theam.border_color),
-                      color: App_Theam.White,
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.grey,
-                            offset: Offset(2.0, 2.0),
-                            blurRadius: 10,
-                            spreadRadius: 1.0,
+                  InkWell(
+                    child: Container(
+                      height: 200,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: App_Theam.border_color),
+                        color: App_Theam.White,
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(2.0, 2.0),
+                              blurRadius: 10,
+                              spreadRadius: 1.0,
+                            ),
+                            BoxShadow(
+                              color: Colors.black,
+                              offset: Offset(-2.0, -2.0),
+                              blurRadius: 10,
+                              spreadRadius: 1.0,
+                            ),
+                          ]
+                      ),
+
+
+                      child: Column(
+                        children: [
+
+                          Row(
+                           // mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7680_29xJG9TwNbrZSfspwmcpgloMBwoummzN67jJt7OTecsAOERnJ3689VRVAuomvT8&usqp=CAU",height: 150,width: 145,)
+                            ],
                           ),
-                          BoxShadow(
-                            color: Colors.black,
-                            offset: Offset(-2.0, -2.0),
-                            blurRadius: 10,
-                            spreadRadius: 1.0,
-                          ),
-                        ]
+                           Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text("Client",style: TextStyle(
+                                fontSize: 25,
+                                color: App_Theam.border_color,
+                                fontWeight: FontWeight.bold
+                              ),)
+                            ],
+                          )
+
+                        ],
+                      ),
                     ),
+                    onTap: ()async{
+                      Navigator.push(context, MaterialPageRoute(builder: (context) =>  const Login_Page()));
 
-
-                    child: Column(
-                      children: [
-
-                        Row(
-                         // mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7680_29xJG9TwNbrZSfspwmcpgloMBwoummzN67jJt7OTecsAOERnJ3689VRVAuomvT8&usqp=CAU",height: 150,width: 145,)
-                          ],
-                        ),
-                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Client",style: TextStyle(
-                              fontSize: 25,
-                              color: App_Theam.border_color,
-                              fontWeight: FontWeight.bold
-                            ),)
-                          ],
-                        )
-
-                      ],
-                    ),
+                    },
                   ),
 
                   InkWell(
@@ -131,7 +137,6 @@ class _Option_PageState extends State<Option_Page> {
 
                     ),
                     onTap: () async {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>  const Login_Page()));
 
 
                     },
