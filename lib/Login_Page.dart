@@ -112,8 +112,12 @@ class _Login_PageState extends State<Login_Page> {
                                         child: TextField(
                                           autofocus: true,
                                           decoration: InputDecoration(
+                                            enabledBorder: UnderlineInputBorder(
+                                              borderSide: BorderSide(color: Colors.orange)
+                                            ),
                                             labelText: "*Email",
-                                            labelStyle:TextStyle(color: App_Theam.Teal)
+                                            labelStyle:TextStyle(color: App_Theam.Teal),
+
 
                                           ),
                                           keyboardType: TextInputType.emailAddress,

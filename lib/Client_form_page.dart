@@ -44,16 +44,29 @@ class _Client_form_PageState extends State<Client_form_Page> {
                   width: 300,
                   child: TextField(
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20)
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide: BorderSide(
+                            color: App_Theam.Teal,
+                            width: 2,
+                          ),
+
+
                       ),
+
                       //********Focus border like hover******************8
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
                         borderSide: BorderSide(
-                          color: App_Theam.Teal,
-                          width: 2,
+                          color: App_Theam.border_color,
+                          width: 1,
                         )
+                      ),
+                      prefixText: "hii",
+                      prefixStyle: TextStyle(color: Colors.red),
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.remove_red_eye),
+                        onPressed: (){},
                       )
 
                     ),
