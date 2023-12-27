@@ -15,70 +15,293 @@ class _Client_form_PageState extends State<Client_form_Page> {
       appBar: AppBar(
         backgroundColor: App_Theam.White,
       ),
-      body: Container(
-        color: App_Theam.White,
-        child: Column(
-          children: [
-            Stack(
-              alignment: Alignment.center,
-              children: [
-                Container(
-                  height: 200,
-                  color: App_Theam.Teal,
+      body: SingleChildScrollView(
+        child: Container(
+          height: 800,
+          color: App_Theam.White,
+          child: Column(
+            children: [
+              SizedBox(height: 10,),
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: App_Theam.border_color),
+                  borderRadius: BorderRadius.circular(100),
+            boxShadow: [
+              const BoxShadow(
+                color: Colors.transparent,
+                offset: Offset(2.0, 2.0),
+                blurRadius: 10,
+                spreadRadius: 1.0,
+              ),
+              BoxShadow(
+                color: App_Theam.border_color,
+                offset: Offset(-2.0, -2.0),
+                blurRadius: 10,
+                spreadRadius: 1.0,
+              ),
+            ]
                 ),
-                Container(
-                  // height: 50,
-                  // width: 50,
-                  //color: App_Theam.White,
-                  child: CircleAvatar(
-                    radius: 50,
+                child: const CircleAvatar(
+                  radius: 80,
+                  backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-czA8HMc57FFRLnsmYEs0rTUiT4E68sAMlzYDOtg1hbfL08eO7qz0DSvxYo_nUB-iJwI&usqp=CAU"),
+
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              //*************Text form code start******************
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 300,
+                    child: TextField(
+                      autofocus: true,
+                      style: TextStyle(color: Colors.black),
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                            color: App_Theam.Teal,
+                            width: 2,
+                          ),
+                        ),
+
+                        //********Focus border like hover******************8
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide(
+                              color: App_Theam.border_color,
+                              width: 1,
+                            )),
+                        prefix: Icon(
+                          Icons.person,
+                          color: App_Theam.Teal,
+                        ),
+                        labelText: "Name",
+                        //labelStyle: TextStyle(color: App_Theam.border_color),
+                      ),
+                    ),
                   ),
-                )
-              ],
-            ),
-            //*************Text form code start******************
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 300,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
+                ],
+              ),
+
+              SizedBox(
+                height: 10,
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 300,
+                    child: TextField(
+                      autofocus: true,
+                      style: TextStyle(color: Colors.black),
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                            color: App_Theam.Teal,
+                            width: 2,
+                          ),
+                        ),
+
+                        //********Focus border like hover******************8
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide(
+                              color: App_Theam.border_color,
+                              width: 1,
+                            )),
+                        prefix: Icon(
+                          Icons.phone,
+                          color: App_Theam.Teal,
+                        ),
+                        labelText: "number",
+                      ),
+                      keyboardType: TextInputType.phone,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 300,
+                    child: TextField(
+                      autofocus: true,
+                      style: TextStyle(color: Colors.black),
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                            color: App_Theam.Teal,
+                            width: 2,
+                          ),
+                        ),
+
+                        //********Focus border like hover******************8
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide(
+                              color: App_Theam.border_color,
+                              width: 1,
+                            )),
+                        prefix: Icon(
+                          Icons.home,
+                          color: App_Theam.Teal,
+                        ),
+                        labelText: "Address",
+                        //labelStyle: TextStyle(color: App_Theam.border_color),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
+              SizedBox(
+                height: 10,
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 300,
+                    child: TextField(
+                      autofocus: true,
+                      style: TextStyle(color: Colors.black),
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                            color: App_Theam.Teal,
+                            width: 2,
+                          ),
+                        ),
+
+                        //********Focus border like hover******************8
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide(
+                              color: App_Theam.border_color,
+                              width: 1,
+                            )),
+                        prefix: Icon(
+                          Icons.location_city,
+                          color: App_Theam.Teal,
+                        ),
+                        labelText: "Location",
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 300,
+                    child: TextField(
+                      autofocus: true,
+                      style: TextStyle(color: Colors.black),
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
                           borderSide: BorderSide(
                             color: App_Theam.Teal,
                             width: 2,
                           ),
 
 
-                      ),
+                        ),
 
-                      //********Focus border like hover******************8
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
-                        borderSide: BorderSide(
-                          color: App_Theam.border_color,
-                          width: 1,
-                        )
+                        //********Focus border like hover******************8
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30),
+                            borderSide: BorderSide(
+                              color: App_Theam.border_color,
+                              width: 1,
+                            )
+                        ),
+                        prefix: Icon(Icons.pin,color: App_Theam.Teal,),
+                        labelText: "Pin",
                       ),
-                      prefixText: "hii",
-                      prefixStyle: TextStyle(color: Colors.red),
-                      suffixIcon: IconButton(
-                        icon: Icon(Icons.remove_red_eye),
-                        onPressed: (){},
-                      )
+                      keyboardType: TextInputType.phone,
 
                     ),
-
                   ),
-                )
-              ],
-            )
-          ],
+
+                ],
+              ),
+
+
+
+              SizedBox(
+                height: 50,
+              ),
+          //********Button**************
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Center(
+                    child: InkWell(
+                      child: Container(
+                        width: 300,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: App_Theam.button_color,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              const BoxShadow(
+                                color: Colors.transparent,
+                                offset: Offset(2.0, 2.0),
+                                blurRadius: 10,
+                                spreadRadius: 1.0,
+                              ),
+                              BoxShadow(
+                                color: App_Theam.border_color,
+                                offset: Offset(-2.0, -2.0),
+                                blurRadius: 10,
+                                spreadRadius: 1.0,
+                              ),
+                            ]),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Continue",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: App_Theam.White),
+                            )
+                          ],
+                        ),
+                      ),
+                      onTap: () async {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const Client_form_Page()));
+                      },
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
-
     );
   }
 }
