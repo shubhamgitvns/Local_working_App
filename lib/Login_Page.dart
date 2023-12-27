@@ -70,15 +70,15 @@ class _Login_PageState extends State<Login_Page> {
                               color: Colors.white,
                               //border: Border.all(color: Colors.orange),
                               borderRadius: BorderRadius.circular(15),
-                              boxShadow: const [
+                              boxShadow:  [
                                 BoxShadow(
-                                  color: Colors.transparent,
+                                  color: App_Theam.White,
                                   offset: Offset(2.0, 2.0),
                                   blurRadius: 10,
                                   spreadRadius: 1.0,
                                 ),
                                 BoxShadow(
-                                  color: Colors.orange,
+                                  color: App_Theam.Teal,
                                   offset: Offset(-2.0, -2.0),
                                   blurRadius: 10,
                                   spreadRadius: 1.0,
@@ -91,34 +91,48 @@ class _Login_PageState extends State<Login_Page> {
                                  Row(mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Get Started *",
+                                      "Get Started",
                                       style: TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold,
-                                      color: App_Theam.Teal),
+                                      color: App_Theam.border_color),
                                     )
                                   ],
                                 ),
                                 const SizedBox(
                                   height: 10,
                                 ),
+                                  Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SizedBox(
+                                        width: 200,
+                                        child: TextField(
+                                          autofocus: true,
+                                          decoration: InputDecoration(
+                                            labelText: "*Email",
+                                            labelStyle:TextStyle(color: App_Theam.Teal)
+
+                                          ),
+                                          keyboardType: TextInputType.emailAddress,
+                                        ),
+                                    )
+                                  ],
+                                ),
+
                                  Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        border: Border.all(color: App_Theam.Teal),
-                                        borderRadius: BorderRadius.circular(20)
-                                      ),
-                                      child: const SizedBox(
-                                          width: 200,
-                                          child: TextField(
-                                            decoration: InputDecoration(
-                                              labelText: "Email",
+                                    SizedBox(
+                                      width: 200,
+                                      child: TextField(
+                                        autofocus: true,
+                                        decoration: InputDecoration(
+                                          labelText: "*Phone",
+                                          labelStyle: TextStyle(color: App_Theam.Teal)
 
-                                            ),
-                                            keyboardType: TextInputType.emailAddress,
-                                          ),
+                                        ),
+                                        keyboardType: TextInputType.number,
                                       ),
                                     )
                                   ],
