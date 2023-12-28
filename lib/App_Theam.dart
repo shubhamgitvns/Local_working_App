@@ -9,3 +9,11 @@ class App_Theam{
   static Color Orange = Colors.orange;
 
 }
+
+class App_Text{
+  static  TextEditingController username = TextEditingController();
+  static  TextEditingController usernumber = TextEditingController();
+  static  TextEditingController useraddress = TextEditingController();
+  static  TextEditingController userlocation = TextEditingController();
+
+}

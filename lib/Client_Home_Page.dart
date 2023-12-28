@@ -9,6 +9,10 @@ class Client_Home_Page extends StatefulWidget {
 }
 
 class _Client_Home_PageState extends State<Client_Home_Page> {
+
+
+  var name=App_Text.username.text;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,12 +29,12 @@ class _Client_Home_PageState extends State<Client_Home_Page> {
               child:  Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const Column(
+                   Column(
                     children: [
                      Row(
                        mainAxisAlignment: MainAxisAlignment.center,
                        children: [
-                         Text("Shubham Maurya",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
+                         Text("$name",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
                        ],
                      ),
                       SizedBox(height: 15),

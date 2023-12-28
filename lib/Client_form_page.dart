@@ -60,6 +60,11 @@ class _Client_form_PageState extends State<Client_form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
+                      onChanged: (String a) {
+                        a = App_Text.username.text;
+                        print(a);
+                      },
+                      controller: App_Text.username,
                       style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
