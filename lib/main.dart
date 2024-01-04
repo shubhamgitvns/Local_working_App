@@ -10,7 +10,6 @@ void main() {
     initialRoute: '/',
     routes: {
       '/': (context) =>  MyApp(),
-
     },
   ));
 }
