@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:githubtesting/Worker_home_page.dart';
 
 import 'App_Theam.dart';
 
@@ -60,7 +61,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      controller: App_Text.username,
+                      controller: App_Text.workername,
                       style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -101,7 +102,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      controller: App_Text.usernumber,
+                      controller: App_Text.workernumber,
 
                       style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
@@ -141,7 +142,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      controller: App_Text.useraddress,
+                      controller: App_Text.workeraddress,
 
                       style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
@@ -183,7 +184,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      controller: App_Text.useraddress,
+                      controller: App_Text.workeprofession,
 
                       style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
@@ -225,7 +226,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      controller: App_Text.usercity,
+                      controller: App_Text.workercity,
 
                       style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
@@ -264,6 +265,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
+                      controller: App_Text.workerpin,
                       style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -342,11 +344,11 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                         ),
                       ),
                       onTap: () async {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) =>
-                        //         const Client_Home_Page()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                const Worker_Home_Page()));
                       },
                     ),
                   ),

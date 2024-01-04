@@ -16,4 +16,12 @@ class App_Text{
   static  TextEditingController useraddress = TextEditingController();
   static  TextEditingController usercity = TextEditingController();
 
+
+  static  TextEditingController workername = TextEditingController();
+  static  TextEditingController workernumber = TextEditingController();
+  static  TextEditingController workeraddress = TextEditingController();
+  static  TextEditingController workercity = TextEditingController();
+  static  TextEditingController workeprofession = TextEditingController();
+  static  TextEditingController workerpin = TextEditingController();
+
 }
