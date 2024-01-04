@@ -79,7 +79,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                             )),
                         prefix: Icon(
                           Icons.person,
-                          color: App_Theam.Teal,
+                          color: App_Theam.Orange,
 
                         ),
                         labelText: "Name",
@@ -122,7 +122,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                               )),
                           prefix: Icon(
                             Icons.phone,
-                            color: App_Theam.Teal,
+                            color: App_Theam.Orange,
                           ),
                           labelText: "Number",
                           labelStyle: TextStyle(color: App_Theam.Teal)
@@ -141,37 +141,37 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      controller: App_Text.usernumber,
+                      controller: App_Text.useraddress,
 
                       style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(
+                            color: App_Theam.Teal,
+                            width: 1.5,
+                          ),
+                        ),
+
+                        //********Focus border like hover******************8
+                        focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(
-                              color: App_Theam.Teal,
-                              width: 1.5,
-                            ),
-                          ),
+                              color: App_Theam.border_color,
 
-                          //********Focus border like hover******************8
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(15),
-                              borderSide: BorderSide(
-                                color: App_Theam.border_color,
-
-                              )),
-                          prefix: Icon(
-                            Icons.sell_rounded,
-                            color: App_Theam.Teal,
-                          ),
-                          labelText: "Work Profession",
-                          labelStyle: TextStyle(color: App_Theam.Teal)
+                            )),
+                        prefix: Icon(
+                          Icons.sell_rounded,
+                          color: App_Theam.Orange,
+                        ),
+                        labelText: "Work Profession",
+                        labelStyle: TextStyle(color: App_Theam.Teal),
                       ),
-                      keyboardType: TextInputType.phone,
                     ),
                   ),
                 ],
               ),
+
               const SizedBox(
                 height: 20,
               ),
@@ -204,7 +204,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                             )),
                         prefix: Icon(
                           Icons.home,
-                          color: App_Theam.Teal,
+                          color: App_Theam.Orange,
                         ),
                         labelText: "Address",
                         labelStyle: TextStyle(color: App_Theam.Teal),
@@ -246,7 +246,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
                             )),
                         prefix: Icon(
                           Icons.location_city,
-                          color: App_Theam.Teal,
+                          color: App_Theam.Orange,
                         ),
                         labelText: "City",
                         labelStyle: TextStyle(color: App_Theam.Teal),
@@ -284,7 +284,7 @@ class _Worker_Form_PageState extends State<Worker_Form_Page> {
 
                             )
                         ),
-                        prefix: Icon(Icons.pin,color: App_Theam.Teal,),
+                        prefix: Icon(Icons.pin,color: App_Theam.Orange,),
                         labelText: "Pin",
                         labelStyle: TextStyle(color: App_Theam.Teal),
 
