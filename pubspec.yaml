@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   flip_card: ^0.7.0
+  carousel_slider: ^4.2.1
   swipebuttonflutter: ^1.0.0
   flutter:
     sdk: flutter
