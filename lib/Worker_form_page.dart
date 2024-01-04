@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:githubtesting/App_Theam.dart';
-import 'Client_Home_Page.dart';
 
+import 'App_Theam.dart';
 
-class Client_form_Page extends StatefulWidget {
-  const Client_form_Page({super.key});
+class Worker_Form_Page extends StatefulWidget {
+  const Worker_Form_Page({super.key});
 
   @override
-  State<Client_form_Page> createState() => _Client_form_PageState();
+  State<Worker_Form_Page> createState() => _Worker_Form_PageState();
 }
 
-class _Client_form_PageState extends State<Client_form_Page> {
+class _Worker_Form_PageState extends State<Worker_Form_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,33 +22,34 @@ class _Client_form_PageState extends State<Client_form_Page> {
           color: App_Theam.White,
           child: Column(
             children: [
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Container(
                 decoration: BoxDecoration(
-                  border: Border.all(color: App_Theam.border_color),
-                  borderRadius: BorderRadius.circular(100),
-            boxShadow: [
-              const BoxShadow(
-                color: Colors.transparent,
-                offset: Offset(2.0, 2.0),
-                blurRadius: 10,
-                spreadRadius: 1.0,
-              ),
-              BoxShadow(
-                color: App_Theam.border_color,
-                offset: Offset(-2.0, -2.0),
-                blurRadius: 10,
-                spreadRadius: 1.0,
-              ),
-            ]
+                    border: Border.all(color: App_Theam.border_color),
+                    //borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.transparent,
+                        offset: Offset(2.0, 2.0),
+                        blurRadius: 10,
+                        spreadRadius: 1.0,
+                      ),
+                      BoxShadow(
+                        color: Colors.grey,
+                        offset: Offset(-2.0, -2.0),
+                        blurRadius: 10,
+                        spreadRadius: 1.0,
+                      ),
+                    ]
                 ),
-                child: const CircleAvatar(
-                  radius: 80,
-                  backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-czA8HMc57FFRLnsmYEs0rTUiT4E68sAMlzYDOtg1hbfL08eO7qz0DSvxYo_nUB-iJwI&usqp=CAU"),
-
-                ),
+                child: Image.network("https://as2.ftcdn.net/v2/jpg/02/46/90/55/1000_F_246905521_0tQkz7nAGCLhHfr2b9PT9Yr425kVDhD4.jpg",height: 150,),
+                // child: const CircleAvatar(
+                //   radius: 80,
+                //   backgroundImage: NetworkImage("https://as2.ftcdn.net/v2/jpg/02/46/90/55/1000_F_246905521_0tQkz7nAGCLhHfr2b9PT9Yr425kVDhD4.jpg"),
+                //
+                // ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               //*************Text form code start******************
@@ -61,7 +61,7 @@ class _Client_form_PageState extends State<Client_form_Page> {
                     child: TextField(
                       autofocus: true,
                       controller: App_Text.username,
-                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+                      style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
@@ -90,7 +90,7 @@ class _Client_form_PageState extends State<Client_form_Page> {
                 ],
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
 
@@ -103,36 +103,76 @@ class _Client_form_PageState extends State<Client_form_Page> {
                       autofocus: true,
                       controller: App_Text.usernumber,
 
-                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+                      style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15),
-                          borderSide: BorderSide(
-                            color: App_Theam.Teal,
-                            width: 1.5,
-                          ),
-                        ),
-
-                        //********Focus border like hover******************8
-                        focusedBorder: OutlineInputBorder(
+                          enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(
-                              color: App_Theam.border_color,
+                              color: App_Theam.Teal,
+                              width: 1.5,
+                            ),
+                          ),
 
-                            )),
-                        prefix: Icon(
-                          Icons.phone,
-                          color: App_Theam.Teal,
-                        ),
-                        labelText: "number",
-                        labelStyle: TextStyle(color: App_Theam.Teal)
+                          //********Focus border like hover******************8
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: BorderSide(
+                                color: App_Theam.border_color,
+
+                              )),
+                          prefix: Icon(
+                            Icons.phone,
+                            color: App_Theam.Teal,
+                          ),
+                          labelText: "Number",
+                          labelStyle: TextStyle(color: App_Theam.Teal)
                       ),
                       keyboardType: TextInputType.phone,
                     ),
                   ),
                 ],
               ),
-              SizedBox(
+
+              const SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 300,
+                    child: TextField(
+                      autofocus: true,
+                      controller: App_Text.usernumber,
+
+                      style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15),
+                            borderSide: BorderSide(
+                              color: App_Theam.Teal,
+                              width: 1.5,
+                            ),
+                          ),
+
+                          //********Focus border like hover******************8
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: BorderSide(
+                                color: App_Theam.border_color,
+
+                              )),
+                          prefix: Icon(
+                            Icons.sell_rounded,
+                            color: App_Theam.Teal,
+                          ),
+                          labelText: "Work Profession",
+                          labelStyle: TextStyle(color: App_Theam.Teal)
+                      ),
+                      keyboardType: TextInputType.phone,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
                 height: 20,
               ),
 
@@ -145,7 +185,7 @@ class _Client_form_PageState extends State<Client_form_Page> {
                       autofocus: true,
                       controller: App_Text.useraddress,
 
-                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+                      style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
@@ -174,7 +214,7 @@ class _Client_form_PageState extends State<Client_form_Page> {
                 ],
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
 
@@ -187,7 +227,7 @@ class _Client_form_PageState extends State<Client_form_Page> {
                       autofocus: true,
                       controller: App_Text.usercity,
 
-                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+                      style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
@@ -216,7 +256,7 @@ class _Client_form_PageState extends State<Client_form_Page> {
                   ),
                 ],
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -224,7 +264,7 @@ class _Client_form_PageState extends State<Client_form_Page> {
                     width: 300,
                     child: TextField(
                       autofocus: true,
-                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+                      style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
@@ -259,10 +299,10 @@ class _Client_form_PageState extends State<Client_form_Page> {
 
 
 
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
-          //********Button**************
+              //********Button**************
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -302,11 +342,11 @@ class _Client_form_PageState extends State<Client_form_Page> {
                         ),
                       ),
                       onTap: () async {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const Client_Home_Page()));
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) =>
+                        //         const Client_Home_Page()));
                       },
                     ),
                   ),
