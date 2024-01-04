@@ -109,9 +109,10 @@ class _Client_Home_PageState extends State<Client_Home_Page> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
+            //************Search field*****************
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -162,10 +163,7 @@ class _Client_Home_PageState extends State<Client_Home_Page> {
                       //********Focus border like hover******************8
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(50),
-                          borderSide: BorderSide(
-                              //color: App_Theam.border_color,
-
-                              )),
+                         ),
                       hintText: "Search your work need",
                       hintStyle: TextStyle(color: App_Theam.border_color),
                     ),
@@ -173,62 +171,227 @@ class _Client_Home_PageState extends State<Client_Home_Page> {
                 ),
               ],
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
 
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Container(
-                height: 100,
-                decoration: BoxDecoration(
-                  border: Border.all(color: App_Theam.Teal),
-                  borderRadius: BorderRadius.circular(10)
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            SizedBox(
+              height: 200,
+              child: SingleChildScrollView(
+                child: Column(
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CircleAvatar(
-                          radius: 30,
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                            color: App_Theam.White,
+                            border: Border.all(color: App_Theam.Teal),
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.transparent,
+                                offset: Offset(2.0, 2.0),
+                                blurRadius: 10,
+                                spreadRadius: 1.0,
+                              ),
+                              BoxShadow(
+                                color: Colors.grey,
+                                offset: Offset(-2.0, -2.0),
+                                blurRadius: 10,
+                                spreadRadius: 1.0,
+                              ),
+                            ]
                         ),
-                      ],
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Vinayak",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: App_Theam.Black),),
-                        Text("Plumber",style: TextStyle(fontWeight: FontWeight.bold,color: App_Theam.border_color),),
-                      ],
-                    ),
-                    Container(
-                      height: 50,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        color: App_Theam.Orange,
-                        borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: App_Theam.Teal),
-                          boxShadow: [
-                            const BoxShadow(
-                              color: Colors.transparent,
-                              offset: Offset(2.0, 2.0),
-                              blurRadius: 5,
-
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            const Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                CircleAvatar(
+                                  radius: 30,
+                                ),
+                              ],
                             ),
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(-2.0, -2.0),
-                              blurRadius: 5,
-
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("Vinayak",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: App_Theam.Black),),
+                                Text("Plumber",style: TextStyle(fontWeight: FontWeight.bold,color: App_Theam.border_color),),
+                              ],
                             ),
-                          ]
+                            Container(
+                                height: 50,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                    color: App_Theam.Orange,
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(color: App_Theam.Teal),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        color: Colors.transparent,
+                                        offset: Offset(2.0, 2.0),
+                                        blurRadius: 5,
+
+                                      ),
+                                      BoxShadow(
+                                        color: Colors.grey,
+                                        offset: Offset(-2.0, -2.0),
+                                        blurRadius: 5,
+
+                                      ),
+                                    ]
+                                ),
+
+                                child: Center(child: Text("Contact"))),
+                          ],
+                        ),
                       ),
+                    ),
 
-                      child: Center(child: Text("Contact"))),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                            color: App_Theam.White,
+                            border: Border.all(color: App_Theam.Teal),
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.transparent,
+                                offset: Offset(2.0, 2.0),
+                                blurRadius: 10,
+                                spreadRadius: 1.0,
+                              ),
+                              BoxShadow(
+                                color: Colors.grey,
+                                offset: Offset(-2.0, -2.0),
+                                blurRadius: 10,
+                                spreadRadius: 1.0,
+                              ),
+                            ]
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            const Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                CircleAvatar(
+                                  radius: 30,
+                                ),
+                              ],
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("Vinayak",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: App_Theam.Black),),
+                                Text("Plumber",style: TextStyle(fontWeight: FontWeight.bold,color: App_Theam.border_color),),
+                              ],
+                            ),
+                            Container(
+                                height: 50,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                    color: App_Theam.Orange,
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(color: App_Theam.Teal),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        color: Colors.transparent,
+                                        offset: Offset(2.0, 2.0),
+                                        blurRadius: 5,
+
+                                      ),
+                                      BoxShadow(
+                                        color: Colors.grey,
+                                        offset: Offset(-2.0, -2.0),
+                                        blurRadius: 5,
+
+                                      ),
+                                    ]
+                                ),
+
+                                child: Center(child: Text("Contact"))),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                            color: App_Theam.White,
+                            border: Border.all(color: App_Theam.Teal),
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.transparent,
+                                offset: Offset(2.0, 2.0),
+                                blurRadius: 10,
+                                spreadRadius: 1.0,
+                              ),
+                              BoxShadow(
+                                color: Colors.grey,
+                                offset: Offset(-2.0, -2.0),
+                                blurRadius: 10,
+                                spreadRadius: 1.0,
+                              ),
+                            ]
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            const Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                CircleAvatar(
+                                  radius: 30,
+                                ),
+                              ],
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("Vinayak",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: App_Theam.Black),),
+                                Text("Plumber",style: TextStyle(fontWeight: FontWeight.bold,color: App_Theam.border_color),),
+                              ],
+                            ),
+                            Container(
+                                height: 50,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                    color: App_Theam.Orange,
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(color: App_Theam.Teal),
+                                    boxShadow: const [
+                                      BoxShadow(
+                                        color: Colors.transparent,
+                                        offset: Offset(2.0, 2.0),
+                                        blurRadius: 5,
+
+                                      ),
+                                      BoxShadow(
+                                        color: Colors.grey,
+                                        offset: Offset(-2.0, -2.0),
+                                        blurRadius: 5,
+
+                                      ),
+                                    ]
+                                ),
+
+                                child: const Center(child: Text("Contact"))),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ),
+            )
+
           ],
         ),
       ),
