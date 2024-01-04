@@ -53,7 +53,7 @@ class _Client_Home_PageState extends State<Client_Home_Page> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [Text("$address,$city ")],
                       ),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                     ],
                   ),
                   Column(
@@ -149,7 +149,6 @@ class _Client_Home_PageState extends State<Client_Home_Page> {
                   child: TextField(
                     autofocus: true,
                     cursorColor: App_Theam.Teal,
-                    controller: App_Text.usercity,
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.bold),
                     decoration: InputDecoration(
