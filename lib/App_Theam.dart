@@ -7,6 +7,7 @@ class App_Theam{
   static Color border_color = Colors.lightBlueAccent;
   static Color Teal = Colors.teal.shade600;
   static Color Orange = Colors.orange;
+  static Color Black = Colors.black;
 
 }
 

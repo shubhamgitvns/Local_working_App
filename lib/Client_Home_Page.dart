@@ -26,7 +26,7 @@ class _Client_Home_PageState extends State<Client_Home_Page> {
         child: Column(
           children: [
             Container(
-              height: 200,
+              height: 160,
               color: App_Theam.Teal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -145,7 +145,6 @@ class _Client_Home_PageState extends State<Client_Home_Page> {
                 Container(
                   width: 300,
                   color: App_Theam.White,
-
                   child: TextField(
                     autofocus: true,
                     cursorColor: App_Theam.Teal,
@@ -173,6 +172,62 @@ class _Client_Home_PageState extends State<Client_Home_Page> {
                   ),
                 ),
               ],
+            ),
+            SizedBox(height: 20,),
+
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                  border: Border.all(color: App_Theam.Teal),
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                        ),
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Vinayak",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,color: App_Theam.Black),),
+                        Text("Plumber",style: TextStyle(fontWeight: FontWeight.bold,color: App_Theam.border_color),),
+                      ],
+                    ),
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: App_Theam.Orange,
+                        borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: App_Theam.Teal),
+                          boxShadow: [
+                            const BoxShadow(
+                              color: Colors.transparent,
+                              offset: Offset(2.0, 2.0),
+                              blurRadius: 5,
+
+                            ),
+                            BoxShadow(
+                              color: Colors.grey,
+                              offset: Offset(-2.0, -2.0),
+                              blurRadius: 5,
+
+                            ),
+                          ]
+                      ),
+
+                      child: Center(child: Text("Contact"))),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
