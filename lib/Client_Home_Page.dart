@@ -112,69 +112,11 @@ class _Client_Home_PageState extends State<Client_Home_Page> {
             const SizedBox(
               height: 30,
             ),
-            //************Search field*****************
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      height: 50,
-                      decoration: BoxDecoration(
-                          color: App_Theam.White,
-                          boxShadow: [
-                            const BoxShadow(
-                              color: Colors.transparent,
-                              offset: Offset(2.0, 2.0),
-                              blurRadius: 10,
-                              spreadRadius: 1.0,
-                            ),
-                            BoxShadow(
-                              color: App_Theam.border_color,
-                              offset: Offset(-2.0, -2.0),
-                              blurRadius: 10,
-                              spreadRadius: 1.0,
-                            ),
-                          ],
-                          border: Border.all(color: App_Theam.border_color),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Image.network(
-                          "https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_1280.png"),
-                    )
-                  ],
-                ),
-                Container(
-                  width: 300,
-                  color: App_Theam.White,
-                  child: TextField(
-                    autofocus: true,
-                    cursorColor: App_Theam.Teal,
-                    style: const TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.bold),
-                    decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50),
-                        borderSide: BorderSide(
-                          color: App_Theam.Orange,
-                          //width: 1.5,
-                        ),
-                      ),
 
-                      //********Focus border like hover******************8
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(50),
-                         ),
-                      hintText: "Search your work need",
-                      hintStyle: TextStyle(color: App_Theam.border_color),
-                    ),
-                  ),
-                ),
-              ],
-            ),
             const SizedBox(height: 20,),
 
             SizedBox(
-              height: 200,
+              height: 500,
               child: SingleChildScrollView(
                 child: Column(
                   children: [
