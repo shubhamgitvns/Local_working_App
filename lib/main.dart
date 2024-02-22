@@ -8,6 +8,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     title: 'Flutter Demo',
     initialRoute: '/',
+
     routes: {
       '/': (context) =>  MyApp(),
     },

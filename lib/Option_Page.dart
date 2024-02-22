@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:githubtesting/Client_form_page.dart';
 import 'package:githubtesting/Worker_form_page.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -77,7 +78,7 @@ class _Option_PageState extends State<Option_Page> {
                       alignment: Alignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.all(15.0),
                           child: Container(
                               height: 100,
                             width: 150,
@@ -105,9 +106,9 @@ class _Option_PageState extends State<Option_Page> {
                                 child: Padding(
                                   padding: EdgeInsets.all(20.0),
                                   child: Text(
-                                    "Client  ",                                  style: TextStyle(
+                                    "Client",                                  style: TextStyle(
                                       color: App_Theam.Orange,
-                                      fontSize: 20,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -147,7 +148,7 @@ class _Option_PageState extends State<Option_Page> {
                       ],
                     ),
                     onTap: ()async{
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>  const Login_Page()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) =>  const Client_form_Page()));
 
                     },
                   ),
@@ -157,7 +158,7 @@ class _Option_PageState extends State<Option_Page> {
                       alignment: Alignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.all(15.0),
                           child: Container(
                             height: 100,
                             width: 150,
@@ -185,9 +186,9 @@ class _Option_PageState extends State<Option_Page> {
                                 child: Padding(
                                   padding: EdgeInsets.all(20.0),
                                   child: Text(
-                                    "Client",                                  style: TextStyle(
+                                    "Worker",                                  style: TextStyle(
                                       color: App_Theam.Orange,
-                                      fontSize: 20,
+                                      fontSize: 16,
                                       fontWeight: FontWeight.bold),
                                   ),
                                 ),
