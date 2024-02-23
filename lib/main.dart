@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:githubtesting/search_page.dart';
 import 'Login_Page.dart';
 import 'Option_Page.dart';
 import 'Welcome_Page.dart';
@@ -10,7 +11,7 @@ void main() {
     initialRoute: '/',
 
     routes: {
-      '/': (context) =>  MyApp(),
+      '/': (context) =>  BottomCollectionBoy(index: 0),
     },
   ));
 }

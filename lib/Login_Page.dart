@@ -18,6 +18,12 @@ class _Login_PageState extends State<Login_Page> {
       appBar: AppBar(
         backgroundColor: App_Theam.Teal,
       ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   items: [
+      //     icon:Icon(Ioncs.home),
+      //     label:"Home",
+      //   ],
+      // ),
       body: SafeArea(
         child: Container(
           color: App_Theam.White,

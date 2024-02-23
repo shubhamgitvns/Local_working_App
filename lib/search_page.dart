@@ -1,91 +1,146 @@
 import 'package:flutter/material.dart';
 import 'package:githubtesting/App_Theam.dart';
-class Search_Page extends StatefulWidget {
-  const Search_Page({super.key});
+
+class BottomCollectionBoy extends StatefulWidget {
+  int index = 0;
+  BottomCollectionBoy({Key? key, required this.index}) : super(key: key);
 
   @override
-  State<Search_Page> createState() => _Search_PageState();
+  State<BottomCollectionBoy> createState() => _BottomCollectionBoyState();
 }
 
-class _Search_PageState extends State<Search_Page> {
+class _BottomCollectionBoyState extends State<BottomCollectionBoy> {
+  int _selectedIndex = 0;
+  bool _showBottomSheet = false;
+  int _previousIndex = 0;
+
+  static final List<Widget> _widgetOptions = <Widget>[
+    Container(
+      color: Colors.white,
+    ),
+    Container(
+      color: Colors.white,
+    ),
+    Container(
+      color: Colors.white,
+    ),
+  ];
+
+  final bool _isBottomSheetOpen = false;
+
+  @override
+  void initState() {
+    _selectedIndex = widget.index;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: (AppBar(
-        backgroundColor: App_Theam.Teal,
-      )),
-      body: Container(
-        color: App_Theam.White,
-        child: Column(
-          children: [
-            SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      // backgroundColor: AppColors.maincolor,
+      bottomNavigationBar: BottomNavigationBar(
+        unselectedItemColor: Colors.white,
+        selectedItemColor: Colors.black,
+        selectedIconTheme: const IconThemeData(color: Colors.black),
+        backgroundColor: Colors.white,
+        selectedLabelStyle: const TextStyle(fontSize: 2),
+        currentIndex: _selectedIndex,
+        onTap: (index) {
+          setState(() {
+            // _selectedIndex = index;
+            _previousIndex = _selectedIndex;
+            // if (index == 3) {
+            //   _showBottomSheet = true;
+            //   _selectedIndex = _previousIndex;
+            // } else {
+            //   _selectedIndex = index;
+            // }
+          });
+        },
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            // backgroundColor: AppColors.buttoncolor,
+            icon: Container(
+              height: 60,
+              width: 60,
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Column(
-                      children: [
-                        Container(
-                          height: 50,
-                          decoration: BoxDecoration(
-                              color: App_Theam.White,
-                              boxShadow: [
-                                const BoxShadow(
-                                  color: Colors.transparent,
-                                  offset: Offset(2.0, 2.0),
-                                  blurRadius: 10,
-                                  spreadRadius: 1.0,
-                                ),
-                                BoxShadow(
-                                  color: App_Theam.border_color,
-                                  offset: Offset(-2.0, -2.0),
-                                  blurRadius: 10,
-                                  spreadRadius: 1.0,
-                                ),
-                              ],
-                              border: Border.all(color: App_Theam.border_color),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Image.network(
-                              "https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_1280.png"),
-                        )
-                      ],
+                    Icon(
+                      Icons.home,
+                      color: _selectedIndex == 0 ? Colors.black : Colors.grey,
                     ),
-                    Container(
-                      width: 300,
-                      color: App_Theam.White,
-                      child: TextField(
-                        autofocus: true,
-                        cursorColor: App_Theam.Teal,
-                        style: const TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(50),
-                            borderSide: BorderSide(
-                              color: App_Theam.Orange,
-                              //width: 1.5,
-                            ),
-                          ),
-
-                          //********Focus border like hover******************8
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          hintText: "Search your work need",
-                          hintStyle: TextStyle(color: App_Theam.border_color),
-                        ),
+                    Text(
+                      "Home",
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: _selectedIndex == 0 ? Colors.black : Colors.grey,
                       ),
                     ),
                   ],
                 ),
-              ],
+              ),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.wallet,
+                    color: _selectedIndex == 1 ? Colors.black : Colors.grey,
+                  ),
+                  Text(
+                    "Collection",
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: _selectedIndex == 1 ? Colors.black : Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.person,
+                    color: _selectedIndex == 0 ? Colors.black : Colors.grey,
+                  ),
+                  Text(
+                    "My Profile",
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: _selectedIndex == 2 ? Colors.black : Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            label: '',
+          ),
 
-            )
-          ],
-        ),
+        ],
       ),
+      appBar: AppBar(
+        backgroundColor: App_Theam.Teal,
+      ),
+      body: Stack(
+        children: [
+          _widgetOptions.elementAt(_selectedIndex),
+        ],
+      ),
+      // bottomSheet: _showBottomSheet ? _buildBottomSheet() : null,
     );
   }
 }
