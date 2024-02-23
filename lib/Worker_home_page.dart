@@ -110,9 +110,15 @@ class _Worker_Home_PageState extends State<Worker_Home_Page> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Comments",style: TextStyle(fontSize: 30,color: Colors.grey),),
+              ],
+            )
 
           ],
         ),
