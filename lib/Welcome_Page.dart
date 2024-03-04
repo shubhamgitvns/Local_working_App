@@ -1,11 +1,8 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:githubtesting/App_Theam.dart';
-import 'package:githubtesting/Client_Home_Page.dart';
 import 'package:githubtesting/Login_Page.dart';
 import 'package:swipebuttonflutter/swipebuttonflutter.dart';
-
-import 'Option_Page.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
